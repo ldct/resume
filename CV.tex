@@ -1,0 +1,189 @@
+\documentclass[letterpaper]{article}
+
+
+\usepackage{hyperref}
+\usepackage{geometry}
+
+
+\usepackage[T1]{fontenc}
+\usepackage[sc,osf]{mathpazo}
+
+
+% Set your name here
+\def\name{Li Xuanji}
+
+
+% Replace this with a link to your CV if you like, or set it empty
+% (as in \def\footerlink{}) to remove the link in the footer:
+\def\footerlink{}
+
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  pdfauthor = {\name},
+  pdfkeywords = {python},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+
+\geometry{
+  body={6.5in, 8.5in},
+  left=1.0in,
+  top=1.25in
+}
+
+
+% Customize page headers
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\large}
+
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+
+% Make lists without bullets
+\renewenvironment{itemize}{
+  \begin{list}{}{
+    \setlength{\leftmargin}{1.5em}
+  }
+}{
+  \end{list}
+}
+
+
+\begin{document}
+
+
+% Place name at left
+{\huge \name}
+
+
+% Alternatively, print name centered and bold:
+%\centerline{\huge \bf \name}
+
+
+\vspace{0.25in}
+
+
+\begin{minipage}{0.45\linewidth}
+  NUS High School of Math and Science \\
+  20 Clementi Avenue 1 Singapore 129957 \\
+  \href{http://www.highsch.nus.edu.sg/}{\tt http://www.highsch.nus.edu.sg/}
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+  \begin{tabular}{ll}
+    Phone: & 96959264 \\
+    Email: & \href{mailto:xuanji@gmail.com}{\tt xuanji@gmail.com} \\
+    Github: & \href{https://github.com/zodiac}{\tt https://github.com/zodiac} \\
+  \end{tabular}
+\end{minipage}
+
+
+\section*{Education}
+
+
+\begin{itemize}
+  \item NUS High School of Math and Science \hfill 2006-2011.
+\end{itemize}
+
+
+\section*{Attachments}
+
+
+\begin{itemize}
+  \item Institute for Infocomm Research \hfill Mar-Nov 2009
+  \item DSO National Laboratories \hfill Nov-Dec 2009 \\
+. \hfill Oct-Dec 2010
+\end{itemize}
+
+
+\section*{Programming}
+These are the languages I am comfortable with:
+  \begin{itemize}
+  \item{Python}
+  \item{C/C++}
+  \item{PLT Scheme (now apparently renamed Racket Scheme)}
+  \end{itemize}
+\section*{Research Projects}
+
+
+Our school encourages us to join research mentorship programs and includes it as a graduation requirement. Following is a list of titles and abstracts of the projects I have completed.
+
+
+  \subsection*{Directional Localization of Objects via 2.4Ghz Wireless Signals}
+In many industrial and office buildings knowing the position of an object is helpful for tracking individuals and moving goods. Previous research involving radio frequency (RF) wireless localization achieved this by creating a fingerprint of signal strengths for each location with several routers with dipole (omnidirectional) antennas and matching observed signal strengths to the location with the most similar fingerprint. However, wireless fingerprinting is unable to determine the direction the user is facing, and hence will not be very helpful in situations where the user is lost or needs directions, e.g. in museum tours or navigating large buildings. In this paper we present a method of which a user, using a directional patch antenna, can use wireless fingerprinting techniques to determine the direction he/she is facing.
+
+
+  \subsection*{Smatch: Static Analysis for C}
+This paper describes the authors' experience working on an open-source static checker, smatch. We do so by taking real-life bugs from the Linux kernel and running smatch on it. If smatch was not able to detect it (a false negative) we try to write a check or modify an existing one so that it can. We believe that this allows us to write better, more realistic checks. Also, we encountered many bugs for which it was not feasible to write a checker for, and discuss them. Examples of checkers written in smatch are given.
+  \\
+  url: \href{http://repo.or.cz/w/smatch.git}{\tt http://repo.or.cz/w/smatch.git/}
+
+
+  \subsection*{LEEK: State Merging for Automatic Test Generation}
+  Automatic test generation is the problem of generating test cases in a given program for the purposes of vulnerability detection and program verification. One method of achieving this is Symbolic Execution, which executes the program with \emph{symbolic} variables to quickly test every possible execution path that the program may take. Often symbolic execution creates many execution paths that are similar; our project focuses on determining when these paths can be merged to cut down on repetitive operations. In addition, we have developed a heuristic to avoid merging when the merging algorithm performs worse. We prove our algorithm's soundness and correctness with respect to the base system and demonstrate its practical usefulness by generating test cases for real world programs. We observe speed up from exponential to linear time for certain programs.
+  \\
+    url:
+    \href{https://github.com/zodiac/klee-nush}{\tt https://github.com/zodiac/klee-nush/}
+
+
+    \section*{Other Projects}
+
+    \subsection*{ankiResource}
+  A set of web apps written in Django, designed to make a convenient way to share sentences, resources, etc to aid in learning languages.
+  \\
+  \\
+  ankiResource is based on the Anki (\href{http://ankisrs.net/}{\tt http://ankisrs.net/}) SRS system. An SRS (Spaced Repitition System) is an electronic flashcard system; cards are shown to the user and the user grades how easy it was to answer the card, and an algorithm is used to determine when the user will next see the card.
+  \\
+  \\
+  ankiResource was designed to allow users to share decks of sentences with each other. We chose sentences as the basic unit that could be shared because it's reccommended by the popular system All Japanese All The Time (\href{http://www.alljapaneseallthetime.com/}{\tt http://www.alljapaneseallthetime.com/}).  Features include automatically parsing and de-conjugating sentences for search with the MeCab (\href{http://mecab.sourceforge.net/}{\tt http://mecab.sourceforge.net}) morphological analyzer.
+  \\
+  \\
+  screenshots: \href{https://docs.google.com/present/view?id=dfbtczd8\_23gtg4b2j2}{\tt https://docs.google.com/present/view?id=dfbtczd8\_23gtg4b2j2}
+\\
+  url: \href{https://github.com/bombpersons/ankiResource}{\tt https://github.com/bombpersons/ankiResource/}
+  \\
+  Unfortunately the site is not currently being hosted.
+
+
+  \subsection*{Python development}
+
+  I sporadically look at the Python issue tracker and work on patches and have gotten a few of them accepted. You can find me by searching for my full name.
+
+  \subsection*{Competitive Programming}
+
+  I learned most of my theoretical CS stuff through preparing for and joining competitive programming contests which require (high-school students) to write programs to accomplish various tasks which is then graded on secret test data; a simple example would be "find all anagrams in a given list of words." Standard algorithms we are expected to know include dynamic programing, binary search, depth-first and breadth-first search, Dijkstra's algorithm, Kruskal's algorithm, suffix array etc. We are also often expected to design new algorithms for difficult problems.
+
+  \bigskip
+
+
+% Footer
+\begin{center}
+  \begin{footnotesize}
+    Last updated: \today \\
+    \href{\footerlink}{\texttt{\footerlink}}
+  \end{footnotesize}
+\end{center}
+
+
+\end{document}
