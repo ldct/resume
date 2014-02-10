@@ -1,2 +1,2 @@
-CV
+resume
 ==
