@@ -1,0 +1,152 @@
+\documentclass[letterpaper]{article}
+
+
+\usepackage{hyperref}
+\usepackage{geometry}
+
+\usepackage[T1]{fontenc}
+
+% Set your name here
+\def\name{Li Xuanji}
+
+
+% Replace this with a link to your CV if you like, or set it empty
+% (as in \def\footerlink{}) to remove the link in the footer:
+\def\footerlink{}
+
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  pdfauthor = {\name},
+  pdfkeywords = {python},
+  pdftitle = {\name: Resume},
+  pdfsubject = {Resume},
+  pdfpagemode = UseNone
+}
+
+
+\geometry{
+  body={6.5in, 8.5in},
+  left=1.0in,
+  top=1.25in
+}
+
+% Customize page headers
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\large}
+
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+
+\setlength\parindent{0em}
+
+
+\renewenvironment{itemize}{
+  \begin{list}{}{
+    \setlength{\leftmargin}{1.5em}
+  }
+}{
+  \end{list}
+}
+
+
+\begin{document}
+
+
+% Place name at left
+{\huge \name}
+
+\vspace{0.25in}
+
+
+\begin{minipage}{0.45\linewidth}
+  NUS High School of Math and Science \\
+  20 Clementi Avenue 1 Singapore 129957 \\
+  \href{http://www.highsch.nus.edu.sg/}{\tt http://www.highsch.nus.edu.sg/}
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+  \begin{tabular}{ll}
+    Phone: & 96959264 \\
+    Email: & \href{mailto:xuanji@gmail.com}{\tt xuanji@gmail.com} \\
+    Github: & \href{https://github.com/zodiac}{\tt github.com/zodiac} \\
+    Web: &\href{xuanji.li}{\tt xuanji.li}
+  \end{tabular}
+\end{minipage}
+
+
+\section*{Education}
+
+
+\begin{itemize}
+  \item NUS High School of Math and Science \hfill 2006-2011 \\
+  Distinction with Honours in Math, Physics and Chemistry and Major in History
+\end{itemize}
+
+
+\section*{Work Experience}
+
+
+\begin{itemize}
+  \item National Olympiad in Informatics Trainer at NUS High \hfill Feb 2014 - Present
+  \item Debate Coach at Bukit View Secondary \hfill Feb 2014 - Present
+  \item Private Tuition \hfill June 2013 - Present
+\end{itemize}
+
+\section*{Relevant Awards}
+
+\begin{itemize}
+  \item International Math and Science Olympiad for Primary Schools - Silver \hfill 2004
+  \item Singapore Junior Physics Olympiad - Silver \hfill 2008
+  \\    Singapore Junior Physics Olympiad - Gold \hfill 2009
+  \\    Singapore Physics Olympiad - Silver \hfill 2009
+  \\    Singapore Physics Olympiad - Silver \hfill 2010
+  \item Singapore Chemistry Olympiad - Silver \hfill 2010
+  \item National Olympiad in Informatics - Silver \hfill 2010 \\
+        National Olympiad in Informatics - Silver \hfill 2011
+  \item Singapore International Mathematics Challenge - Commendation \hfill 2010
+  \item Australian Informatics Olympiad - Gold \hfill 2009
+  \item Nanyang Concept Test in Chemistry - Distinction \hfill 2010 \\
+        Nanyang Concept Test in Physics - Distinction \hfill 2010
+  \item Australian Mathematics Competition (Junior) - High Distinction \hfill 2006
+  \\    Australian Mathematics Competition (Junior) - Distinction \hfill 2007
+  \\    Australian Mathematics Competition (Intermediate) - Distinction \hfill 2008
+  \\    Australian Mathematics Competition (Senior) - Credit \hfill 2011
+  \item Australian National Chemistry Quiz - High Distinction \hfill 2008
+  \item Rio Tinto Big Science Competition - Credit \hfill 2007
+  \\    Rio Tinto Big Science Competition - Distinction \hfill 2008
+  \item American Mathematics Contest 8 - Distinction, Section 2nd Place \hfill 2007
+  \\    American Mathematics Contest 10A - Distinction, AIME Qualifier \hfill 2009
+  \item Singapore Mathematical Olympiad (Junior) - Bronze \hfill 2006
+  \\    Singapore Mathematical Olympiad (Open) - Honorable Mention \hfill 2008
+  \\    Singapore Mathematical Olympiad (Senior) - Bronze \hfill 2008
+  \\    Singapore Mathematical Olympiad (Senior) - Honorable Mention \hfill 2009
+\end{itemize}
+
+\bigskip
+
+
+% Footer
+\begin{center}
+  \begin{footnotesize}
+    Last updated: \today \\
+    \href{\footerlink}{\texttt{\footerlink}}
+  \end{footnotesize}
+\end{center}
+
+
+\end{document}
