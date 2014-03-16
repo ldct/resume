@@ -5,13 +5,12 @@
 \usepackage{geometry}
 
 \usepackage[T1]{fontenc}
+\usepackage{graphicx}
 
 % Set your name here
 \def\name{Li Xuanji}
 
 
-% Replace this with a link to your CV if you like, or set it empty
-% (as in \def\footerlink{}) to remove the link in the footer:
 \def\footerlink{}
 
 
@@ -21,8 +20,6 @@
   urlcolor = black,
   pdfauthor = {\name},
   pdfkeywords = {python},
-  pdftitle = {\name: Curriculum Vitae},
-  pdfsubject = {Curriculum Vitae},
   pdfpagemode = UseNone
 }
 
@@ -39,10 +36,12 @@
 \thispagestyle{empty}
 
 
+\renewcommand{\familydefault}{\sfdefault}
+
 % Custom section fonts
 \usepackage{sectsty}
-\sectionfont{\rmfamily\mdseries\Large}
-\subsectionfont{\rmfamily\mdseries\itshape\large}
+\sectionfont{\sffamily\mdseries\Large}
+\subsectionfont{\sffamily\mdseries\itshape\large}
 
 
 % Other possible font commands include:
@@ -58,7 +57,7 @@
 
 \renewenvironment{itemize}{
   \begin{list}{}{
-    \setlength{\leftmargin}{1.5em}
+    \setlength{\leftmargin}{0em}
   }
 }{
   \end{list}
@@ -67,108 +66,71 @@
 
 \begin{document}
 
-
-% Place name at left
-{\huge \name}
-
 \vspace{0.25in}
 
-
-\begin{minipage}{0.45\linewidth}
-  NUS High School of Math and Science \\
-  20 Clementi Avenue 1 Singapore 129957 \\
-  \href{http://www.highsch.nus.edu.sg/}{\tt http://www.highsch.nus.edu.sg/}
+\begin{minipage}{0.8\linewidth}
+\resizebox{0.5\linewidth}{!}{\fontsize{30}{36}\selectfont \name}
 \end{minipage}
-\begin{minipage}{0.45\linewidth}
+\begin{minipage}{0.2\linewidth}
   \begin{tabular}{ll}
-    Phone: & 96959264 \\
-    Email: & \href{mailto:xuanji@gmail.com}{\tt xuanji@gmail.com} \\
-    Github: & \href{https://github.com/zodiac}{\tt github.com/zodiac} \\
-    Web: &\href{xuanji.li}{\tt xuanji.li}
+    \href{mailto:xuanji@gmail.com}{\tt xuanji@gmail.com} \\
+    \href{https://github.com/zodiac}{\tt github.com/zodiac} \\
+    \href{www.xuanji.li}{\tt www.xuanji.li}
   \end{tabular}
 \end{minipage}
 
+\vspace{2em}
 
-\section*{Education}
-
-
-\begin{itemize}
-  \item NUS High School of Math and Science \hfill 2006-2011.
-\end{itemize}
-
-
-\section*{Work Experience}
-
-
-\begin{itemize}
-  \item Institute for Infocomm Research \hfill Mar-Nov 2009
-  \item DSO National Laboratories \hfill Nov-Dec 2009 \\
-. \hfill Oct-Dec 2010
-\end{itemize}
-
-
-\section*{Programming}
-These are the languages I am comfortable with:
-  \begin{itemize}
-  \item{Python}
-  \item{C/C++}
-  \item{Scheme}
-  \end{itemize}
-
-
-\section*{Side Projects}
-
-\subsection*{Interactive SICP}
-Etc
-
-\subsection*{ankiResource}
-A set of web apps written in Django, designed to make a convenient way to share sentences, resources, etc to aid in learning languages.
-\\ \\
-ankiResource is based on the Anki (\href{http://ankisrs.net/}{\tt http://ankisrs.net/}) Spaced Repitition System, an electronic flashcard system which shows flashcards to the user and lets him grades how easy it was to answer the card. An algorithm is used to determine when the user will next see the card.
-\\ \\
-ankiResource was designed to allow users to share decks of sentences with each other. We chose sentences as the basic unit that could be shared because it's reccommended by the popular system All Japanese All The Time. Features include automatically parsing and de-conjugating sentences for search with the MeCab morphological analyzer.
-\\ \\
-screenshots: \href{https://docs.google.com/present/view?id=dfbtczd8\_23gtg4b2j2}{\tt https://docs.google.com/present/view?id=dfbtczd8\_23gtg4b2j2}
-\\
-url: \href{https://github.com/bombpersons/ankiResource}{\tt github.com/bombpersons/ankiResource/}
-
-\section*{Research}
-
-Following is a list of the projects I have completed.
-
-\subsection*{Directional Localization of Objects via 2.4Ghz Wireless Signals}
-In many industrial and office buildings knowing the position of an object is helpful for tracking individuals and moving goods. Previous research involving radio frequency (RF) wireless localization achieved this by creating a fingerprint of signal strengths for each location with several routers with dipole (omnidirectional) antennas and matching observed signal strengths to the location with the most similar fingerprint. However, wireless fingerprinting is unable to determine the direction the user is facing, and hence will not be very helpful in situations where the user is lost or needs directions, e.g. in museum tours or navigating large buildings. In this paper we present a method of which a user, using a directional patch antenna, can use wireless fingerprinting techniques to determine the direction he/she is facing.
-
-\subsection*{Smatch: Static Analysis for C}
-This paper describes the authors' experience working on an open-source static checker, smatch. We do so by taking real-life bugs from the Linux kernel and running smatch on it. If smatch was not able to detect it (a false negative) we try to write a check or modify an existing one so that it can. We believe that this allows us to write better, more realistic checks. Also, we encountered many bugs for which it was not feasible to write a checker for, and discuss them. Examples of checkers written in smatch are given.
-\\
-url: \href{http://repo.or.cz/w/smatch.git}{\tt http://repo.or.cz/w/smatch.git/}
-
-\subsection*{LEEK: State Merging for Automatic Test Generation}
-Automatic test generation is the problem of generating test cases in a given program for the purposes of vulnerability detection and program verification. One method of achieving this is Symbolic Execution, which executes the program with \emph{symbolic} variables to quickly test every possible execution path that the program may take. Often symbolic execution creates many execution paths that are similar; our project focuses on determining when these paths can be merged to cut down on repetitive operations. In addition, we have developed a heuristic to avoid merging when the merging algorithm performs worse. We prove our algorithm's soundness and correctness with respect to the base system and demonstrate its practical usefulness by generating test cases for real world programs. We observe speed up from exponential to linear time for certain programs.
-\\
-url:
-\href{https://github.com/zodiac/klee-nush}{\tt https://github.com/zodiac/klee-nush/}
-
-
-\subsection*{Python development}
-
-I sporadically look at the Python issue tracker and work on patches and have gotten a few of them accepted. You can find me by searching for my full name.
-
-\subsection*{Competitive Programming}
-
-I learned most of my theoretical CS stuff through preparing for and joining competitive programming contests which require (high-school students) to write programs to accomplish various tasks which is then graded on secret test data; a simple example would be ``find all anagrams in a given list of words." Standard algorithms we are expected to know include dynamic programing, binary search, depth-first and breadth-first search, Dijkstra's algorithm, Kruskal's algorithm, suffix array etc. We are also often expected to design new algorithms for difficult problems.
-
-\bigskip
-
-
-% Footer
 \begin{center}
-  \begin{footnotesize}
-    Last updated: \today \\
-    \href{\footerlink}{\texttt{\footerlink}}
-  \end{footnotesize}
+\section*{Education}
 \end{center}
 
+\subsubsection*{NUS High School \hfill 2006-2011}
+Graduated with Honours in Physics, Chemistry, Mathematics and Majors in History. Ranked 11th in country for International Olympiad in Informatics selection tests and received Silver medals for the Singapore Physics Olympiad and Singapore Chemistry Olympiad.
+
+\subsubsection*{National University of Singapore \hfill Jul-Nov 2011}
+Read CS1101S Programming Methodology, an accelerated introduction to computer science. Based on MIT's old 6.001 course and uses Structure and Interpretation of Computer Programs as a textbook.
+
+\vspace{1em}
+
+\begin{center}
+\section*{Side Projects}
+\end{center}
+\subsubsection*{Interactive SICP \hfill \href{http://xuanji.appspot.com/isicp}{\tt xuanji.appspot.com/isicp}}
+Used javascript web workes to create interactive online version of the classic CS textbook Structure and Interpretation of Computer Programs. Project was voted to \#1 spot on Hacker News.
+
+\subsubsection*{EarthMap}
+Like Skymap, but for Earth! Uses phone's accelerometer and compass to control direction Google Maps 3D view. Written in 24 hours for AngelHack.
+
+\subsubsection*{libgit2.js \hfill \href{https://github.com/zodiac/libgit2.js}{\tt github.com/zodiac/libgit2.js}}
+Javascript port of the libgit2 git library, compiled using Emscripten.
+
+\subsubsection*{ankiResource \hfill \href{https://github.com/bombpersons/ankiResource}{\tt github.com/bombpersons/ankiResource/}}
+A Django application that lets users share flashcard decks and individual cards for learning Japanese.Automatically parses and de-conjugates sentences for search with the MeCab morphological analyzer.
+
+\vspace{1em}
+
+\begin{center}
+\section*{Work Experience}
+\end{center}
+
+\subsubsection*{NUS High School \hfill Present}
+Trained students for National Olympiad in Informatics by running weekly contests and preparing lessons on basic algorithms and data structures.
+
+\subsubsection*{Bukit View Secondary School \hfill Present}
+Coached students for National-level debate tournament.
+
+\subsubsection*{DSO National Laboratories \hfill Oct-Dec 2009, 2010}
+Extended a C static analysis framework and a symbolic execution engine targetting LLVM bytecode. Demonstrated 17x speedup over previously published results for specially crafted test cases by mitigating combinatorial explosion.
+
+\subsubsection*{Institute for Infocomm Research \hfill Mar-Nov 2009}
+Developed and tested software for directional wireless localization, using ambient WiFi and a directional antenna to determine user's position and bearing.
+
+\vspace{1em}
+
+\begin{center}
+\section*{Skills}
+\end{center}
+Experienced in Python and Javascript. Some experience in C, C++, Racket Scheme, Haskell, TI-BASIC and Tcl. Intermediate Linux user - runs Ubuntu with a tiling window manager and can compile the occasional dependency. Longtime Dvorak (keyboard format) and LaTeX fan.
 
 \end{document}
