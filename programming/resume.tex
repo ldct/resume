@@ -1,153 +1,215 @@
-\documentclass[letterpaper]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\documentclass[]{deedy-resume-openfont}
 
-\usepackage{hyperref}
-\usepackage{geometry}
-
-\usepackage[T1]{fontenc}
-\usepackage{graphicx}
-
-% Set your name here
-\def\name{Li Xuanji}
-
-
-\def\footerlink{}
-
-
-% The following metadata will show up in the PDF properties
-\hypersetup{
-  colorlinks = true,
-  urlcolor = black,
-  pdfauthor = {\name},
-  pdfpagemode = UseNone
-}
-
-
-\geometry{
-  body={6.5in, 8.5in},
-  left=1.0in,
-  top=1.25in
-}
-
-% Customize page headers
-\pagestyle{myheadings}
-\markright{\name}
-\thispagestyle{empty}
-
-
-\renewcommand{\familydefault}{\sfdefault}
-
-% Custom section fonts
-\usepackage{sectsty}
-\sectionfont{\sffamily\mdseries\Large}
-\subsectionfont{\sffamily\mdseries\itshape\large}
-
-
-% Other possible font commands include:
-% \ttfamily for teletype,
-% \sffamily for sans serif,
-% \bfseries for bold,
-% \scshape for small caps,
-% \normalsize, \large, \Large, \LARGE sizes.
-
-
-\setlength\parindent{0em}
 
 \begin{document}
 
-\vspace{0.25in}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{minipage}{0.8\linewidth}
-\resizebox{0.5\linewidth}{!}{\fontsize{30}{36}\selectfont \name}
-\end{minipage}
-\begin{minipage}{0.2\linewidth}
-  \begin{tabular}{ll}
-    \href{mailto:xuanji@gmail.com}{\tt xuanji@gmail.com} \\
-    \href{https://github.com/zodiac}{\tt github.com/zodiac} \\
-    \href{www.xuanji.li}{\tt www.xuanji.li}
-  \end{tabular}
-\end{minipage}
+\setlength{\parindent}{0cm}
 
-\vspace{2em}
+\namesection{Li}{Xuanji}{ \urlstyle{same}\url{www.xuanji.li} | \urlstyle{same}\url{github.com/ldct} | \href{mailto:xuanji@gmail.com}{xuanji@gmail.com}
+}
 
-\begin{center}
-\section*{Work Experience}
-\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection*{Junior Software Developer - Nugit \hfill May 2014-Present}
-\begin{itemize}
-\item Implemented automated ad performance analysis in Python. 
-\item Wrote and styled corresponding front-end visualizations. 
-\item Stack: flask, pandas, backbone layoutmanager, svg.js, mongodb.
-\end{itemize}
+\begin{minipage}[t]{0.30\textwidth} 
 
-\subsubsection*{Informatics Coach - NUS High School \hfill Feb-Mar 2014}
-Trained students for National Olympiad in Informatics by running weekly contests and preparing lessons on basic algorithms and data structures.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\vspace{1em}
+\section{Education} 
 
-\begin{center}
-\section*{Side Projects}
-\end{center}
-\subsubsection*{Interactive SICP \hfill \href{http://xuanji.appspot.com/isicp/}{\tt xuanji.appspot.com/isicp/}}
-An interactive online version of the classic CS textbook Structure and Interpretation of Computer Programs where users can edit and run code fragments. Project was voted to \#1 spot on Hacker News.
+\subsection{University of Waterloo}
+BCS Computer Science 2020
+\location{ }
+Cumulative Average: 85\% \\
+Putnam Top 350
+\sectionsep
 
-\subsubsection*{libgit2.js \hfill \href{https://github.com/zodiac/libgit2.js}{\tt github.com/zodiac/libgit2.js}}
-Javascript port of the libgit2 git library, compiled using Emscripten. Includes commit tree and directory visualizer.
+\subsection{Courses}
+\custombold{``Big 3''} \\
+CS 452 Real-Time Operating Systems \\
+CS 488 Computer Graphics \\
+CS 444 Compiler Construction \\
+\vspace{0.7em}
+\custombold{Math} \\
+Real Analysis, Lebesgue Integration, Fourier Analysis \\
+Linear Programming, Graph Theory, Combinatorial Optimization \\
+\vspace{0.7em}
+\custombold{Other} \\
+Principles of Programming Languages \\
+Concurrent and Parallel Programming \\
+Took all available lower-year advanced courses
+\sectionsep
 
-\subsubsection*{ankiResource \hfill \href{https://github.com/bombpersons/ankiResource}{\tt github.com/bombpersons/ankiResource/}}
-A Django application that lets users share flashcard decks and individual cards for learning Japanese. Automatically parses and de-conjugates sentences for search with the MeCab morphological analyzer.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\vspace{1em}
+\section{Skills}
+\location{Languages}
+python \textbullet{} javascript + typescript \textbullet{} C++ \textbullet{} rust \textbullet{} racket \textbullet{} C \\
+\location{Languages (Read-Only)} Haskell \\
 
-\begin{center}
-\section*{Research}
-\end{center}
-
-\subsubsection*{DSO National Laboratories \hfill Oct-Dec 2009, 2010}
-Extended a C static analysis framework and a symbolic execution engine targetting LLVM bytecode. Demonstrated 17x speedup over previously published results for selected test cases by avoiding combinatorial explosion.
-
-\subsubsection*{Institute for Infocomm Research \hfill Mar-Nov 2009}
-Developed and tested software for directional wireless localization, using ambient WiFi and a directional antenna to determine user's position and bearing.
-
-\vspace{1em}
-
-\begin{center}
-\section*{Hackathons}
-\end{center}
-
-\subsubsection*{Headlights - YHack 2014 \hfill 2nd place}
-
-Helmet mounted Bicycle turn signals controlled by arm signals and the Myo
-
-\subsubsection*{Myourtual Reality - BoilerMake 2014 \hfill Google Services Runner-up Prize}
-
-Control 3D objects in a augmented reality platform
-
-\subsubsection*{Eyedentify - HackMIT 2014 \hfill Qualcomm - Best Use of Vuforia}
-
-Image and text recognition for Google Glass
+\sectionsep
 
 \vspace{1em}
 
-\begin{center}
-\section*{Education}
-\end{center}
+\section{Interests}
+\location{Graphics} Vanishing points, Projective Geometry, 3D rotations \\
+\location{Music} Overtones, Just Intonation, Equal Temperament \\
+\location{Programming Languages} Multiple Dispatch, Type Systems, Macros, Continuation
 
-\subsubsection*{University of Waterloo \hfill Sept 2014}
-Candidate for Bachelors of Computer Science (Honours, Co-Op). Average: 94\%, GPA: 4.0/4.0.
+\sectionsep
 
-\subsubsection*{National University of Singapore \hfill Jul-Nov 2011}
-Read CS1101 Programming Methodology, an accelerated introduction to computer science.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection*{NUS High School \hfill 2006-2011}
-Graduated with Honours in Physics, Chemistry, Mathematics and Majors in History. Ranked 11th in country for International Olympiad in Informatics selection tests and received Silver medals for the Singapore Physics Olympiad and Singapore Chemistry Olympiad.
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{L4}
+\descript{| Researcher and Software Engineer \hfill \location{Jan 2018 - Sept 2019} }
 \vspace{1em}
+\begin{tightemize}
+\item Designed novel off-chain scaling methods for Ethereum
+\item Co-authored definitive paper on state channels
+\item Co-led our state channels implementation smart contracts + client code
+\end{tightemize}
+\sectionsep
 
-\begin{center}
-\section*{Skills}
-\end{center}
-Proficient in Python and Javascript. Intermediate Linux user. Some experience with C, C++, Racket Scheme, Haskell, MongoDB, TI-BASIC, Tcl and LaTeX.
+\runsubsection{Facebook}
+\descript{| Production Engineer Intern \hfill \location{May - Sept 2017} }
+\begin{tightemize}
+\item Cold Storage - custom hardware for data backup
+\item Rewrote integration test infrastructure to run on every commit
+\end{tightemize}
+\sectionsep
 
-\end{document}
+\runsubsection{Airbnb}
+\descript{| Data Infrastructure Intern \hfill \location{Jun - Aug 2016 } }
+\begin{tightemize}
+\item Airflow - popular open-source task scheduler
+\item Added various features: FUSE-based git access, rolling UI restart
+\item Received commit rights after Apache Software Foundation vote process
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Quizlet}
+\descript{| Platform Engineer Intern \hfill \location{Feb - May 2016 } }
+\begin{tightemize}
+\item Responsible for running PHP codebase on HHVM
+\item Reverse-engineered undocumented PHP features, HHVM config flags, HHVM extension API, libdwarf header changes
+\item Root-caused corrupt data bugs to undefined behaviour in MySQL and memcached extension calls
+\end{tightemize}
+\sectionsep
+
+\runsubsection{diamond.io}
+\descript{| Software Engineer Intern \hfill \location{May - Aug 2015 } }
+\begin{tightemize}
+\item Personal search and file hosting startup
+\item Set up backend with nodejs and postgres with full-text search
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Nugit}
+\descript{| Junior Software Developer \hfill \location{May 2014 – Feb 2015 } }
+\begin{tightemize}
+\item Full-stack developer on a small (<5 persons) engineering team 
+\item Implemented automated adwords performance analysis in Python
+\item Wrote and styled corresponding front-end visualizations
+\item CEO recognized my contributions as critical to product's launch
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+
+\runsubsection{Symbolic Execution}
+\hfill \location{ \urlstyle{same}\url{github.com/ldct/klee-nush} } \descript{}
+\begin{tightemize}
+\item Extended a C static analysis framework targetting LLVM bytecode
+\item Up to 17x speedup over previously published results
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Interactive SICP}
+\hfill \location{ \urlstyle{same}\url{www.xuanji.li/isicp} } \descript{}
+\begin{tightemize}
+\item Interactive online CS textbook
+\item In-browser interpreter allows users to edit and run code fragments
+\item Voted to \#1 spot on Hacker News, >1k stars on github
+\item Core engine adapted to teach class at UC Berkeley
+\end{tightemize}
+\sectionsep
+
+\runsubsection{19x19}
+\hfill \location{ \urlstyle{same}\url{github.com/ldct/babbelgames} } \descript{}
+\begin{tightemize}
+\item Online baduk/Go (board game) platform built with socket.io
+\item Real-time chat, move history, undos, spectators and lobby
+\end{tightemize}
+\sectionsep
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
